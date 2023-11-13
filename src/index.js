@@ -16,7 +16,7 @@ mongoose.connect(DB_URI).then(()=>{
     console.log(error)
 })
 
-app.listen(8082,()=>{
+app.listen(5000,()=>{
     console.log("Listening...")
 })
 
