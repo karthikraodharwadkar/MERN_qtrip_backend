@@ -17,7 +17,7 @@ mongoose.connect(DB_URI).then(()=>{
     console.log(error)
 })
 
-app.listen(process.env.PORT,()=>{
+app.listen(process.env.NODE_ENV,()=>{
     console.log("Listening...")
 })
 
