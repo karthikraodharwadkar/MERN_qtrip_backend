@@ -12,13 +12,12 @@ app.use(cors())
 
 //const DB_URI = "mongodb://127.0.0.1:27017/qtrip"
 mongoose.connect(DB_URI).then(()=>{
-    console.log("connected to mongoDB")
+    console.log("connected to MongoDB")
+    app.listen(process.env.NODE_ENV,()=>{
+        console.log(`listening at ${process.env.NODE_ENV}`)
+    })
 }).catch((error)=>{
     console.log(error)
-})
-
-app.listen(process.env.PORT,()=>{
-    console.log("Listening...")
 })
 
 app.use("/cities",routes)
